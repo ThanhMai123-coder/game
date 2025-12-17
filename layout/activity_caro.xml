@@ -1,0 +1,290 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Thanh trên chứa biểu tượng và chữ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icon_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/home"
+            android:src="@drawable/baseline_home_24" />
+
+        <TextView
+            android:id="@+id/text_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Bình chọn nhiều"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/text_tasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Chơi nhiều"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/icon_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/notifications" />
+
+        <TextView
+            android:id="@+id/text_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:text="Tải nhiều"
+            android:textColor="@android:color/white" />
+
+
+        <TextView
+            android:id="@+id/text_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="⋮"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:contentDescription="@string/menu" />
+    </LinearLayout>
+
+    <!-- Thanh dưới chứa thanh tìm kiếm và biểu tượng tìm kiếm -->
+    <LinearLayout
+        android:layout_width="386dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"> <!-- Khoảng cách giữa hai thanh -->
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@drawable/search_background"
+            android:hint="Search"
+            android:padding="8dp"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="31dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_timk" />
+    </LinearLayout>
+
+    <!-- CardView chứa tiêu đề -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <!-- GridLayout chứa tiêu đề -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/white"
+            android:padding="8dp">
+
+            <!-- Ô chữ nhật cho tiêu đề -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="#5247C5"
+                android:gravity="center"
+                android:text="Tic tac toe"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </GridLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView chứa các game -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <!-- LinearLayout chứa 3 game -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Game 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="Game 10"
+                    android:src="@drawable/ic_anh24" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tic tac toe 3x3"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tic Tac Toe is a puzzle game for two players, called X and O, who take turns marking boxes in a 3×3 grid."
+                        android:textColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/button_3x3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Chơi ngay" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Game 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_anh10"
+                    android:contentDescription="Game 12" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tic tac toe 6x6"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tic Tac Toe is a puzzle game for two players, called X and O, who take turns marking boxes in a 6×6 grid."
+                        android:textColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/button_6x6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Chơi ngay" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Game 3 -->
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#5247C5"
+        android:gravity="center"
+        android:text="Game khác"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:rowCount="2"
+        android:columnCount="3"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="105dp"
+            android:layout_columnWeight="1"
+            android:contentDescription="Game 7"
+            android:src="@drawable/ic_anh37" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="108dp"
+            android:layout_columnWeight="1"
+            android:contentDescription="Game 8"
+            android:src="@drawable/ic_anh38" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="106dp"
+            android:layout_columnWeight="1"
+            android:contentDescription="Game 13"
+            android:src="@drawable/ic_anh39" />
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="96dp"
+            android:layout_columnWeight="1"
+            android:contentDescription="Game 7"
+            android:src="@drawable/ic_anh40" />
+
+        <ImageView
+            android:layout_width="104dp"
+            android:layout_height="102dp"
+            android:layout_columnWeight="1"
+            android:contentDescription="Game 8"
+            android:src="@drawable/ic_anh41" />
+
+        <ImageView
+            android:layout_width="78dp"
+            android:layout_height="104dp"
+            android:layout_columnWeight="1"
+            android:contentDescription="Game 13"
+            android:src="@drawable/ic_anh42" />
+
+    </GridLayout>
+
+</LinearLayout>

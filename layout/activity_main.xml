@@ -1,0 +1,316 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#645AD5"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Thanh trên chứa biểu tượng và chữ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icon_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/home"
+            android:src="@drawable/baseline_home_24" />
+
+        <TextView
+            android:id="@+id/text_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Bình chọn nhiều"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/text_tasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Chơi nhiều"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/icon_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/notifications" />
+
+
+        <TextView
+            android:id="@+id/text_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:text="Tải nhiều"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/text_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/menu"
+            android:text="⋮"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- Thanh dưới chứa thanh tìm kiếm và biểu tượng tìm kiếm -->
+    <LinearLayout
+        android:layout_width="386dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"> <!-- Khoảng cách giữa hai thanh -->
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@drawable/search_background"
+            android:hint="Search"
+            android:padding="8dp"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="31dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_timk" />
+    </LinearLayout>
+
+    <!-- CardView chứa tiêu đề -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <!-- GridLayout chứa tiêu đề -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/white"
+            android:padding="8dp">
+
+            <!-- Ô chữ nhật cho tiêu đề -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="#6B60D3"
+                android:gravity="center"
+                android:text="Game trí tuệ"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </GridLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView chứa các game -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <!-- LinearLayout chứa 3 game -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Game 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="Game 10"
+                    android:src="@drawable/ic_anh10" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tic tac toe"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tic Tac Toe is a puzzle game for two players, called X and O, who take turns marking boxes in a 3×3,6×6,9×9 grid."
+                        android:textColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/btnCaro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Chơi ngay" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Game 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_anh12"
+                    android:contentDescription="Game 12" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quizz Math"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quizz Math là những bài test các phép tính đơn giản."
+                        android:textColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/btnQuizzmath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Chơi ngay" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Game 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="142dp"
+                    android:layout_weight="1"
+                    android:contentDescription="Game 11"
+                    android:src="@drawable/ic_anh11" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đuổi hình bắt chữ"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đuổi hình bắt chữ là tựa game kinh điển. Bạn hoàn toàn có thể dựa trên kinh nghiệm và phán đoán cá nhân để đoán biết đáp án của các câu đố."
+                        android:textColor="@android:color/darker_gray" />
+
+                    <Button
+                        android:id="@+id/btnDhbc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Chơi ngay" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#5247C5"
+        android:gravity="center"
+        android:text="Game khác"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="111dp"
+            android:layout_height="119dp"
+            android:layout_gravity="top|start"
+
+            android:contentDescription="Game 7"
+            android:src="@drawable/ic_anh7" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="123dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:contentDescription="Game 8"
+            android:src="@drawable/ic_anh8" />
+
+        <ImageView
+            android:layout_width="101dp"
+            android:layout_height="132dp"
+            android:layout_gravity="top|end"
+            android:contentDescription="Game 13"
+            android:src="@drawable/ic_anh13" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp" />
+
+    </FrameLayout>
+
+</LinearLayout>
